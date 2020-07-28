@@ -10,7 +10,25 @@
 </head>
 
 <body>
-    <h1>Hello PHP World</h1>
+    <div class="container">
+        <h3 class="text-center my-3">Painel de Controle</h3>
+        <h4 class="my-3">Dados de cadastro</h4>
+        <form action="">
+            <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" class="form-control mb-3" name="name" id="name" required>
+            </div>
+            <div class="form-group">
+                <label for="birth-date">Data de Nascimento</label>
+                <input type="date" class="form-control mb-3" name="birth-date" id="birth-date" required>
+            </div>
+            <div class="form-group">
+                <label for="occupation">Função</label>
+                <input type="occupation" class="form-control mb-3" name="occupation" id="occupation" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
         integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
