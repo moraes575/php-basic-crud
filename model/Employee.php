@@ -18,6 +18,20 @@ class Employee
         $Connection->query($insert_query);
     }
 
+    public function find($sql)
+    {
+
+        $Connection = new Connection();
+
+        $Connection->connect();
+
+        $Connection->query($sql);
+
+        $this->row = @mysqli_affected_rows($Connection->result);
+
+        $this->result = $Connection->result;
+    }
+
     public function delete($id)
     {
 
@@ -41,8 +55,8 @@ class Employee
 
         $Connection->query($update_query);
 
-        $this->Row = mysqli_num_rows($Connection->result);
+        $this->row = mysqli_num_rows($Connection->result);
 
-        $this->Result = $Connection->result;
+        $this->result = $Connection->result;
     }
 }
