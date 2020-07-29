@@ -1,6 +1,3 @@
-<?php
-session_start()
-?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -15,12 +12,6 @@ session_start()
     <div class="container">
         <h3 class="text-center my-3">Painel de Controle</h3>
         <h4 class="my-3">Dados de cadastro</h4>
-        <?php
-        if (isset($_SESSION['msg'])) {
-            echo $_SESSION['msg'];
-            unset($_SESSION['msg']);
-        }
-        ?>
         <form method="POST" action="../process.php">
             <div class="form-group">
                 <label for="name">Nome</label>
