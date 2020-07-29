@@ -5,7 +5,7 @@ const USER = "root";
 const PASSWORD = "";
 const DATABASE_NAME = "company";
 
-class DatabaseAccess
+class Connection
 {
 
     public function connect()
