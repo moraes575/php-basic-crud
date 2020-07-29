@@ -11,16 +11,34 @@
 <body>
     <?php
     include_once('navbar.php');
+    require_once('../controller/EmployeeController.php');
+    process('find')
     ?>
     <div class="container">
         <h3 class="text-center my-3">Funcionários</h3>
-        <table class="table table-striped">
-            <thead class="text-center">
-                <td><b>ID</b></td>
-                <td><b>Nome</b></td>
-                <td><b>Data de Nascimento</b></td>
-                <td><b>Função</b></td>
+        <table class="table">
+            <thead class="text-center thead-dark">
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Função</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Excluir</th>
+                </tr>
             </thead>
+            <?php while ($row = mysqli_fetch_array($result)) { ?>
+                <tbody class="text-center">
+                    <tr>
+                        <td> <?php echo $row['id']; ?> </td>
+                        <td> <?php echo $row['name']; ?> </td>
+                        <td> <?php echo $row['birth_date']; ?> </td>
+                        <td> <?php echo $row['occupation']; ?> </td>
+                        <td><a href="update.php?id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-primary">Editar</button></a></td>
+                        <td><a href="consult.php?ok=delete&id=<?php echo $row['id']; ?>"><button type="button" class="btn btn-danger">Excluir</button></a></td>
+                    </tr>
+                </tbody>
+            <?php } ?>
         </table>
     </div>
 </body>
