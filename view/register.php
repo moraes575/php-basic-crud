@@ -11,6 +11,8 @@
 <body>
     <?php
     include_once('navbar.php');
+    require_once('../controller/EmployeeController.php');
+    process('insert');
     ?>
     <div class="container">
         <h3 class="text-center my-3">Cadastro de Funcionário</h3>
@@ -28,7 +30,10 @@
                 <label for="occupation">Função</label>
                 <input type="occupation" class="form-control mb-3" name="occupation" id="occupation" required>
             </div>
-            <button type="submit" class="btn btn-primary">Salvar</button>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Salvar</button>
+                <input type="hidden" name="ok" id="ok">
+            </div>
         </form>
     </div>
 </body>

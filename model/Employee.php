@@ -8,7 +8,7 @@ class Employee
     public function insert($name, $birth_date, $occupation)
     {
 
-        $insert_query = 'INSERT INTO employees (name, birth_date, occupation)
+        $insert_query = 'INSERT INTO employees (`name`, `birth_date`, `occupation`)
         VALUES("' . $name . '","' . $birth_date . '","' . $occupation . '")';
 
         $Connection = new Connection();

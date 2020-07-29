@@ -17,9 +17,9 @@ function process($process)
             $row = $employee->row;
             $result = $employee->result;
 
-            if ($_POST['ok'] == 'true') {
+            if (isset(($_POST['ok'])) == 'true') {
                 $employee->insert($_POST['name'], $_POST['birth-date'], $_POST['occupation']);
-                echo '<script>alert("Cadastrado com sucesso !");</script>';
+                echo '<script>alert("Funcionário cadastrado com sucesso!");</script>';
                 echo '<script>window.location="index.php";</script>';
             }
 
@@ -38,7 +38,7 @@ function process($process)
 
             if ($_GET['ok'] == "delete") {
                 $employee->delete($_GET['id']);
-                echo '<script>alert("Excluido com sucesso!");</script>';
+                echo '<script>alert("Funcionário excluído com sucesso!");</script>';
                 echo '<script>window.location="consult.php";</script>';
             }
 
@@ -57,7 +57,7 @@ function process($process)
 
             if ($_POST['ok'] == "true") {
                 $employee->update($_POST['name'], $_POST['birth-date'], $_POST['occupation'], $_GET['id']);
-                echo '<script>alert("Alterado com sucesso!");</script>';
+                echo '<script>alert("Funcionário atualizado com sucesso!");</script>';
                 echo '<script>window.location="consult.php";</script>';
             }
 
