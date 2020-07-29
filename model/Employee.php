@@ -47,7 +47,7 @@ class Employee
     public function update($name, $birth_date, $occupation, $id)
     {
 
-        $update_query = 'UDPATE employees SET name ="' . $name . '", birth_date="' . $birth_date . '" , occupation="' . $occupation . '" WHERE id="' . $id . '"';
+        $update_query = 'UPDATE employees SET name ="' . $name . '", birth_date="' . $birth_date . '" , occupation="' . $occupation . '" WHERE id="' . $id . '"';
 
         $Connection = new Connection();
 
