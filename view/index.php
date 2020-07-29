@@ -10,7 +10,7 @@
 
 <body>
     <?php
-    include_once('navbar.php');
+    include_once('navbar.html');
     ?>
     <h2 class="text-center my-3">Painel de Controle de Funcionários</h2>
 </body>

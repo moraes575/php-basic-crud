@@ -10,7 +10,7 @@
 
 <body>
     <?php
-    include_once('navbar.php');
+    include_once('navbar.html');
     require_once('../controller/EmployeeController.php');
     process('update')
     ?>
